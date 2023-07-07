@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(
-          iconTheme:  IconThemeData(
+          iconTheme: IconThemeData(
             color: myColor,
           ),
           titleTextStyle: Styles.textStyle16Medium.copyWith(color: myColor),
@@ -39,7 +39,13 @@ class MyApp extends StatelessWidget {
             statusBarIconBrightness: Brightness.dark,
           ),
         ),
-        primarySwatch: Colors.blue,
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          elevation: 6,
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: myColor,
+          unselectedItemColor: suvaGreyColor,
+          backgroundColor: Colors.white,
+        ),
       ),
       home: const SelectLanguageScreen(),
     );

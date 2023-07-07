@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nosoh_app/View/base_layout/base_layout_screen.dart';
 import 'package:nosoh_app/core/assets_data.dart';
 import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/shared_components.dart';
@@ -153,7 +154,16 @@ class _OTPScreenState extends State<OTPScreen> {
                 text: AppStrings.next,
                 textStyle: Styles.textStyle24Medium,
                 color: completeOTP ? myColor : myColor.withOpacity(0.5),
-                onPressed: () {}),
+                onPressed: () {
+                  if (completeOTP) {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BaseLayoutScreen(),
+                        ),
+                        (route) => false);
+                  }
+                }),
           ],
         )),
       ),

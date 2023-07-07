@@ -1,6 +1,11 @@
 class AssetsData {
   static const languageAnimation = 'assets/animations/languageAnimation.json';
   static const reloadingIcon = 'assets/icons/reload.svg';
+  static const addPersonIcon = 'assets/icons/addPersonIcon.svg';
+  static const homeIcon = 'assets/icons/homeIcon.svg';
+  static const menuIcon = 'assets/icons/menuIcon.svg';
+  static const personIcon = 'assets/icons/personIcon.svg';
+  static const emptyImage = 'assets/images/empty.png';
   static const onBoardingAnimation1 =
       'assets/animations/onBoardingAnimation1.json';
   static const onBoardingAnimation2 =

@@ -25,4 +25,10 @@ abstract class AppStrings {
   static const confirmPhoneNumberMessage = 'اكتب الرمز اللي جاك على رقم الجوال';
   static const receiveCodeIn = 'يوصلك الرمز خلال';
   static const sendCodeAgain = 'ارسال الرمز مرة ثانية';
+  static const main = 'الرئيسية';
+  static const search = 'بحث';
+  static const emptyScreen = 'صفحتك الرئيسية فارغة';
+  static const toFollowMessage = 'لمتابعة المحللين';
+  static const goToMessage = 'اذهب لقائمة المحللين';
+  static const analystsList = 'قائمة المحللين';
 }
