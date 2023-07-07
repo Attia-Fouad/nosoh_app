@@ -4,6 +4,12 @@ import 'package:nosoh_app/core/constants.dart';
 import 'colors.dart';
 
 abstract class Styles {
+  static TextStyle textStyle12Medium = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: formFieldTextErrorColor,
+    fontFamily: myFontMedium,
+  );
   static TextStyle textStyle13Medium = TextStyle(
     fontSize: 13,
     fontWeight: FontWeight.w500,
@@ -44,6 +50,12 @@ abstract class Styles {
     fontSize: 20,
     fontWeight: FontWeight.w500,
     color: customOrangeColor,
+    fontFamily: myFontMedium,
+  );
+  static TextStyle textStyle22Medium = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w500,
+    color: formFieldTextFillColor,
     fontFamily: myFontMedium,
   );
   static TextStyle textStyle24Medium = const TextStyle(

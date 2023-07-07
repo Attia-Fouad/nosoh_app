@@ -20,4 +20,5 @@ abstract class AppStrings {
   static const termsAndConditions = 'الشروط والأحكام';
   static const understandTheRisks = 'فهم المخاطر';
   static const and = 'و';
+  static const phoneValidator = 'رقم الجوال لازم يكون 10 أرقام';
 }

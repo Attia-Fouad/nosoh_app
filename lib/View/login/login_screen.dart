@@ -1,6 +1,7 @@
 import 'package:custom_check_box/custom_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:nosoh_app/core/app_strings.dart';
 import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/core/styles.dart';
@@ -18,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
   bool acceptTerms = false;
   var controller = TextEditingController();
   var formKey = GlobalKey<FormState>();
+  bool fill = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,29 +57,77 @@ class _LoginScreenState extends State<LoginScreen> {
                 Row(
                   children: [
                     Expanded(
-                      child: TextFormField(
+                      child: IntlPhoneField(
+                        //disableLengthCheck: true,
+
+                        validator: (value) {
+                          if (value?.completeNumber.length != 10) {
+                            return AppStrings.phoneValidator;
+                          }
+                          return null;
+                        },
+                        invalidNumberMessage: AppStrings.phoneValidator,
+                        onChanged: (val) {
+                          if (val.completeNumber.isNotEmpty && fill == false) {
+                            setState(() {
+                              fill = true;
+                            });
+                          }
+                          if (val.completeNumber.isEmpty && fill == true) {
+                            setState(() {
+                              fill = false;
+                            });
+                          }
+                        },
+                        onSubmitted: (val) {
+                          setState(() {});
+                        },
                         controller: controller,
-                        style: TextStyle(
-                          color: formFieldColor,
-                        ),
+                        style: Styles.textStyle22Medium,
                         keyboardType: TextInputType.phone,
+                        initialCountryCode: 'EG',
                         decoration: InputDecoration(
+                          filled: true,
+                          fillColor: formFieldColor,
+                          errorStyle: Styles.textStyle12Medium,
                           labelStyle: Styles.textStyle18Medium,
                           focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25.0),
+                            borderRadius: BorderRadius.circular(29.0),
                             borderSide: BorderSide(
                               width: 1,
-                              color: formFieldBorderColor,
+                              color: formFieldActiveBorderColor,
                             ),
                           ),
-                          enabledBorder: OutlineInputBorder(
+                          enabledBorder: fill
+                              ? OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(29.0),
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: formFieldTextCorrectColor,
+                                  ),
+                                )
+                              : OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: formFieldBorderColor,
+                                  ),
+                                ),
+                          errorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(29.0),
                             borderSide: BorderSide(
                               width: 1,
-                              color: formFieldBorderColor,
+                              color: formFieldErrorBorderColor,
                             ),
                           ),
                           labelText: AppStrings.phoneNumber,
-                          border: const OutlineInputBorder(),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(29.0),
+                            borderSide: BorderSide(
+                              width: 1,
+                              color: formFieldTextCorrectColor,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -140,10 +190,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 70,
                 ),
                 defaultButton(
-                  color: HexColor('##353448').withOpacity(0.5),
+                  color: controller.text.length == 10
+                      ? HexColor('#353448')
+                      : HexColor('#353448').withOpacity(0.5),
                   text: AppStrings.next,
                   textStyle: Styles.textStyle24Medium,
-                  onPressed: () {},
+                  onPressed: () {
+                    if (formKey.currentState!.validate()) {}
+                  },
                 ),
               ],
             ),
