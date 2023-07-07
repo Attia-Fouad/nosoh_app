@@ -12,4 +12,12 @@ abstract class AppStrings {
   static const onBoardingBody3 = 'بقية التفاصيل سنتركها لك لتكتشفها بنفسك';
   static const skip = 'تخطي';
   static const startRegistering = 'ابدأ التسجيل';
+  static const login = 'تسجيل الدخول';
+  static const yourPhoneNumber = 'رقم جوالك';
+  static const enterYouPhoneMessage = 'ادخل رقم جوالك لنرسل لك كود التفعيل';
+  static const phoneNumber = 'رقم الجوال';
+  static const agreement = 'الموافقة على';
+  static const termsAndConditions = 'الشروط والأحكام';
+  static const understandTheRisks = 'فهم المخاطر';
+  static const and = 'و';
 }

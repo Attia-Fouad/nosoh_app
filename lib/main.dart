@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:nosoh_app/core/colors.dart';
 
 import 'View/select_language/select_language_screen.dart';
+import 'core/styles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,10 +27,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        appBarTheme: const AppBarTheme(
+        appBarTheme: AppBarTheme(
+          iconTheme:  IconThemeData(
+            color: myColor,
+          ),
+          titleTextStyle: Styles.textStyle16Medium.copyWith(color: myColor),
           backgroundColor: Colors.white,
           elevation: 0,
-          systemOverlayStyle: SystemUiOverlayStyle(
+          systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: Colors.white,
             statusBarIconBrightness: Brightness.dark,
           ),

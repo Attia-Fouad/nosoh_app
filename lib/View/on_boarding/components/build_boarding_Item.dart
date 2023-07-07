@@ -6,7 +6,9 @@ import '../on_boarding_screen.dart';
 
 class BuildOnBoardingItem extends StatelessWidget {
   final BoardingModel model;
+
   const BuildOnBoardingItem({super.key, required this.model});
+
   @override
   Widget build(BuildContext context) {
     return ListView(

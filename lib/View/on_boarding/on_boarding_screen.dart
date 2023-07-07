@@ -5,7 +5,7 @@ import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/core/styles.dart';
 import 'package:nosoh_app/shared_components.dart';
 
-import '../select_language/select_language_screen.dart';
+import '../login/login_screen.dart';
 import 'components/build_boarding_Item.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -47,12 +47,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   bool isLast = false;
 
   void submit() {
-    Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const SelectLanguageScreen(),
-        ),
-        (route) => false);
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const LoginScreen(),
+      ),
+    );
   }
 
   @override
