@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:nosoh_app/View/home/home_screen.dart';
+import 'package:nosoh_app/View/notifications/notifications_screen.dart';
 import 'package:nosoh_app/core/app_strings.dart';
 import 'package:nosoh_app/core/colors.dart';
 
@@ -45,7 +46,13 @@ class _BaseLayoutScreenState extends State<BaseLayoutScreen> {
               )),
           IconButton(
               color: myColor,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const NotificationsScreen(),
+                    ));
+              },
               icon: CircleAvatar(
                 backgroundColor: myColor,
                 child: const Icon(

@@ -31,4 +31,17 @@ abstract class AppStrings {
   static const toFollowMessage = 'لمتابعة المحللين';
   static const goToMessage = 'اذهب لقائمة المحللين';
   static const analystsList = 'قائمة المحللين';
+  static const notifications = 'الإشعارات';
+  static const today = 'اليوم';
+  static const notificationTitle1 =
+      'يوجد تحليل جديد من محللك المفضل ( اسم المحلل )';
+  static const notificationTitle2 =
+      'وصل سعر (اسم السهم) إلى السعر المستهدف وفقاً لتحليل (المحلل)';
+  static const notificationTitle3 =
+      'كسر سعر تحليل (analyst name) وقف الخسارة للسهم (stock)';
+  static const notificationTitle4 =
+      'يوجد تحديث على شركة ( اسم الشركة ) وفقا لتحليل ( اسم المحلل )';
+  static const date = '29 مايو 2023';
+  static const notificationTime1 = '10:00 صباحا2023';
+  static const notificationTime2 = '12:00 مساءا';
 }

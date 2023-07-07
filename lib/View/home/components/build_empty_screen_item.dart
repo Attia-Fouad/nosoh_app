@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/app_strings.dart';
+import '../../../core/assets_data.dart';
 import '../../../core/colors.dart';
 import '../../../core/styles.dart';
 
@@ -17,7 +18,7 @@ class BuildEmptyScreenItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/images/empty.png',
+              AssetsData.emptyImage,
             ),
             const SizedBox(
               height: 40,

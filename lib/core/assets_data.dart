@@ -6,6 +6,9 @@ class AssetsData {
   static const menuIcon = 'assets/icons/menuIcon.svg';
   static const personIcon = 'assets/icons/personIcon.svg';
   static const emptyImage = 'assets/images/empty.png';
+  static const likeIcon = 'assets/icons/likeIcon.svg';
+  static const handIcon = 'assets/icons/handIcon.svg';
+
   static const onBoardingAnimation1 =
       'assets/animations/onBoardingAnimation1.json';
   static const onBoardingAnimation2 =

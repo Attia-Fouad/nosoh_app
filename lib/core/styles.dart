@@ -10,6 +10,12 @@ abstract class Styles {
     color: formFieldTextErrorColor,
     fontFamily: myFontMedium,
   );
+  static TextStyle textStyle12Regular = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: notificationsTimeColor,
+    fontFamily: myFontRegular,
+  );
   static TextStyle textStyle13Medium = TextStyle(
     fontSize: 13,
     fontWeight: FontWeight.w500,
@@ -27,6 +33,12 @@ abstract class Styles {
     fontWeight: FontWeight.bold,
     color: Colors.black,
     fontFamily: myFontBold,
+  );
+  static TextStyle textStyle15Medium = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w500,
+    color: myColor,
+    fontFamily: myFontMedium,
   );
   static TextStyle textStyle16Medium = TextStyle(
     fontSize: 16,
