@@ -12,3 +12,4 @@ Color formFieldErrorBorderColor = HexColor('#FF0023');
 Color formFieldTextFillColor = HexColor('#004A80');
 Color formFieldTextErrorColor = HexColor('#EA3F3F');
 Color formFieldTextCorrectColor = HexColor('#0096AB');
+Color pinBorderCompleteColor = HexColor('##6F6BB2');

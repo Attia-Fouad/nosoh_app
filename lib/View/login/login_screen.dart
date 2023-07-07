@@ -7,6 +7,7 @@ import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/core/styles.dart';
 
 import '../../shared_components.dart';
+import '../otp/otp_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -20,6 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   var controller = TextEditingController();
   var formKey = GlobalKey<FormState>();
   bool fill = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -196,7 +198,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   text: AppStrings.next,
                   textStyle: Styles.textStyle24Medium,
                   onPressed: () {
-                    if (formKey.currentState!.validate()) {}
+                    if (formKey.currentState!.validate()) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                OTPScreen(phoneNumber: controller.text),
+                          ));
+                    }
                   },
                 ),
               ],
