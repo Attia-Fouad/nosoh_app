@@ -45,4 +45,16 @@ abstract class AppStrings {
   static const date = '29 مايو 2023';
   static const notificationTime1 = '10:00 صباحا2023';
   static const notificationTime2 = '12:00 مساءا';
+  static const filtering = 'تصفية';
+  static const analystOpinions = 'اراء المحللين';
+  static const all = 'الكل';
+  static const speculation = 'مضاربة';
+  static const investment = 'استثمار';
+  static const analysisType = 'نوع التحليل';
+  static const buy = 'شراء';
+  static const sale = 'بيع';
+  static const analysts = 'المحللين';
+  static const favorite = 'المفضلة';
+  static const myOpinions = 'ارائي';
+  static const apply = 'تطبيق';
 }

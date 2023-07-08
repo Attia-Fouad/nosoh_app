@@ -10,6 +10,7 @@ class AssetsData {
   static const nameImage = 'assets/images/name.png';
   static const icon1Image = 'assets/images/icon1.png';
   static const icon2Image = 'assets/images/icon2.png';
+  static const dragImage = 'assets/images/drag.png';
   static const likeIcon = 'assets/icons/likeIcon.svg';
   static const handIcon = 'assets/icons/handIcon.svg';
 

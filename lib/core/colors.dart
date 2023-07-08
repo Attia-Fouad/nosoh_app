@@ -18,3 +18,4 @@ Color containerColor = HexColor('#EAEAEA');
 Color containerTextColor = HexColor('#515151');
 Color notificationsTimeColor = HexColor('#989898');
 Color notificationBorderColor = HexColor('#EDEDED80');
+Color dragImageColor = HexColor('#707070');
