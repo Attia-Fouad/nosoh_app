@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'components/build_empty_screen_item.dart';
 import 'components/build_filtering_bottom_sheet.dart';
+import 'components/build_home_item.dart';
 import 'components/build_search_bar.dart';
 import 'components/build_sorting_bottom_sheet.dart';
 
@@ -42,7 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             );
           }),
-          const Expanded(child: BuildEmptyScreenItem()),
+          //const Expanded(child: BuildEmptyScreenItem()),
+          const BuildHomeItem(),
         ],
       ),
     );

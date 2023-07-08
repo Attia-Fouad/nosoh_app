@@ -79,4 +79,15 @@ abstract class AppStrings {
   static const settings = 'الإعدادات';
   static const aboutApp = 'عن التطبيق';
   static const logout = 'تسجيل خروج';
+  static const seeIt = 'اطلع عليها هنا';
+  static const lorem =
+      'وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتهالخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذته';
+  static const policy =
+      'باستمرار استخدامك للتطبيق فأنت توافق على سياسة إخلاء المسؤولية';
+  static const companyName = 'اسم الشركة هنا';
+  static const homeItemDate = '03:40:05 PM - 27 Oct 2022';
+  static const priceInSaudi = '12.33 ريال';
+  static const priceWhenAnalysis = 'السعر وقت التحليل';
+  static const targetPrice = 'السعر المستهدف';
+  static const todayPrice = 'السعر اليوم';
 }
