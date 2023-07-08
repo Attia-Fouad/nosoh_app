@@ -16,6 +16,7 @@ class AssetsData {
   static const handIcon = 'assets/icons/handIcon.svg';
   static const playIcons = 'assets/icons/play.svg';
   static const leftArrowIcon = 'assets/icons/left-arrow.svg';
+  static const userIcons = 'assets/icons/user.svg';
   static const whatsAppIcon = 'assets/icons/whatsapp.svg';
   static const addIcon = 'assets/icons/add.svg';
 

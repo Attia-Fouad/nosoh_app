@@ -72,4 +72,11 @@ abstract class AppStrings {
   static const buyOpinions = 'اراء شراء';
   static const successRate = 'نسبة النجاح';
   static const follow = 'متابعة';
+  static const ahmedNamed = 'احمد احمد';
+  static const ahmedUserName = 'ahmed-44';
+  static const profile = 'الملف الشخصي';
+  static const myBills = 'فواتيري';
+  static const settings = 'الإعدادات';
+  static const aboutApp = 'عن التطبيق';
+  static const logout = 'تسجيل خروج';
 }

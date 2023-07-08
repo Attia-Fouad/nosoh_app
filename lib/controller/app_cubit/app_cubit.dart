@@ -26,7 +26,13 @@ class AppCubit extends Cubit<AppStates> {
   ];
 
   void changeBottomNavBar(int index) {
-    currentIndex = index;
-    emit(ChangeNavBarState());
+    if (index == 0 || index == 1) {
+      currentIndex = index;
+      emit(ChangeNavBarState());
+    }
+    if (index == 3) {
+      scaffoldKey.currentState?.openDrawer();
+      emit(ChangeNavBarState());
+    }
   }
 }

@@ -71,6 +71,12 @@ abstract class Styles {
     color: formFieldTextFillColor,
     fontFamily: myFontMedium,
   );
+  static TextStyle textStyle22Bold = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.w500,
+    color: myColor,
+    fontFamily: myFontBold,
+  );
   static TextStyle textStyle24Medium = const TextStyle(
     fontSize: 24,
     fontWeight: FontWeight.w500,

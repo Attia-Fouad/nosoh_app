@@ -9,6 +9,7 @@ import 'package:nosoh_app/controller/app_cubit/app_state.dart';
 import 'package:nosoh_app/core/colors.dart';
 
 import '../../core/styles.dart';
+import 'components/build_drawer.dart';
 
 class BaseLayoutScreen extends StatefulWidget {
   const BaseLayoutScreen({super.key});
@@ -20,6 +21,7 @@ class BaseLayoutScreen extends StatefulWidget {
 class _BaseLayoutScreenState extends State<BaseLayoutScreen> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return BlocProvider(
       create: (context) {
         return AppCubit();
@@ -148,6 +150,7 @@ class _BaseLayoutScreenState extends State<BaseLayoutScreen> {
                 ),
               ),
             ),
+            drawer: BuildDrawer(width: width),
           );
         },
       ),
