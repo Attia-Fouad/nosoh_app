@@ -98,56 +98,47 @@ class _BaseLayoutScreenState extends State<BaseLayoutScreen> {
                     ),
                   )
                 : null,
-            bottomNavigationBar: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 37,
-                vertical: 20,
+            bottomNavigationBar: Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: 10,
               ),
-              child: Container(
-                clipBehavior: Clip.antiAlias,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey
-                          .withOpacity(0.5), // Set the desired shadow color
-                      spreadRadius: 2, // Set the desired spread radius
-                      blurRadius: 5, // Set the desired blur radius
-                      offset: const Offset(0, 3), // Set the desired offset
-                    ),
-                  ],
-                  borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(24),
-                    topLeft: Radius.circular(24),
-                    bottomLeft: Radius.circular(24),
-                    bottomRight: Radius.circular(24),
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey
+                        .withOpacity(0.5), // Set the desired shadow color
+                    spreadRadius: 1, // Set the desired spread radius
+                    blurRadius: 6, // Set the desired blur radius
                   ),
-                ),
-                child: BottomNavigationBar(
-                  showSelectedLabels: false,
-                  showUnselectedLabels: false,
-                  items: const [
-                    BottomNavigationBarItem(
-                      icon: FaIcon(FontAwesomeIcons.houseChimney),
-                      label: '',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: FaIcon(FontAwesomeIcons.userCheck),
-                      label: '',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: FaIcon(FontAwesomeIcons.usersViewfinder),
-                      label: '',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: FaIcon(FontAwesomeIcons.bars),
-                      label: '',
-                    ),
-                  ],
-                  currentIndex: cubit.currentIndex,
-                  onTap: (index) {
-                    cubit.changeBottomNavBar(index);
-                  },
-                ),
+                ],
+                borderRadius: BorderRadius.circular(24),
+              ),
+              child: BottomNavigationBar(
+                showSelectedLabels: false,
+                showUnselectedLabels: false,
+                items: const [
+                  BottomNavigationBarItem(
+                    icon: FaIcon(FontAwesomeIcons.houseChimney),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: FaIcon(FontAwesomeIcons.userCheck),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: FaIcon(FontAwesomeIcons.usersViewfinder),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: FaIcon(FontAwesomeIcons.bars),
+                    label: '',
+                  ),
+                ],
+                currentIndex: cubit.currentIndex,
+                onTap: (index) {
+                  cubit.changeBottomNavBar(index);
+                },
               ),
             ),
             drawer: BuildDrawer(width: width),
