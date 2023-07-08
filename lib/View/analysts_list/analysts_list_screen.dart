@@ -33,7 +33,7 @@ class AnalystsListScreen extends StatelessWidget {
           Expanded(
             child: ListView.separated(
               separatorBuilder: (context, index) => const SizedBox(
-                height: 10,
+                height: 15,
               ),
               itemCount: 10,
               itemBuilder: (context, index) => const BuildAnalystsItem(),
