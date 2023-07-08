@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:nosoh_app/View/home/components/build_help_bottom_sheet.dart';
 import 'package:nosoh_app/View/notifications/notifications_screen.dart';
 import 'package:nosoh_app/controller/app_cubit/app_cubit.dart';
 import 'package:nosoh_app/controller/app_cubit/app_state.dart';
@@ -33,7 +34,18 @@ class _BaseLayoutScreenState extends State<BaseLayoutScreen> {
               actions: [
                 IconButton(
                     color: myColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet<void>(
+                        context: context,
+                        shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(50),
+                        )),
+                        builder: (BuildContext context) {
+                          return const BuildHelpBottomSheet();
+                        },
+                      );
+                    },
                     icon: CircleAvatar(
                       backgroundColor: myColor,
                       child: const Icon(

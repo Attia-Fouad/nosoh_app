@@ -13,6 +13,8 @@ class AssetsData {
   static const dragImage = 'assets/images/drag.png';
   static const likeIcon = 'assets/icons/likeIcon.svg';
   static const handIcon = 'assets/icons/handIcon.svg';
+  static const playIcons = 'assets/icons/play.svg';
+  static const whatsAppIcon = 'assets/icons/whatsapp.svg';
 
   static const onBoardingAnimation1 =
       'assets/animations/onBoardingAnimation1.json';

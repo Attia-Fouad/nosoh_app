@@ -39,6 +39,7 @@ abstract class Styles {
     fontWeight: FontWeight.w500,
     color: myColor,
     fontFamily: myFontMedium,
+    decoration: TextDecoration.none,
   );
   static TextStyle textStyle16Medium = TextStyle(
     fontSize: 16,

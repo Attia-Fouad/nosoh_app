@@ -62,4 +62,9 @@ abstract class AppStrings {
   static const profitDownToUp = 'الأرباح: من الأقل للأعلى';
   static const newsOpinions = 'احدث الاراء';
   static const oldestOpinions = 'اقدم الاراء';
+  static const help = 'المساعدة';
+  static const helpMessage =
+      'للاستفادة من الخدمة وفهمها أكثر يمكنك العثور على مقطع فيديو توضيحي أدناه';
+  static const contactWithCustomerService = 'التواصل مع فريق خدمة العملاء';
+  static const close = 'إغلاق';
 }

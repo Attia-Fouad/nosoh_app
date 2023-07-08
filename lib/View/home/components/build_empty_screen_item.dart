@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nosoh_app/controller/app_cubit/app_cubit.dart';
 
 import '../../../core/app_strings.dart';
 import '../../../core/assets_data.dart';
@@ -38,7 +39,9 @@ class BuildEmptyScreenItem extends StatelessWidget {
                   style: Styles.textStyle14Medium,
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    AppCubit.get(context).changeBottomNavBar(1);
+                  },
                   child: Text(
                     AppStrings.goToMessage,
                     style: Styles.textStyle14Medium.copyWith(
