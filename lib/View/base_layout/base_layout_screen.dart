@@ -100,21 +100,21 @@ class _BaseLayoutScreenState extends State<BaseLayoutScreen> {
                 : null,
             bottomNavigationBar: Container(
               margin: const EdgeInsets.symmetric(
-                horizontal: 10,
+                horizontal: 18,
               ),
               clipBehavior: Clip.hardEdge,
               decoration: BoxDecoration(
+                color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey
-                        .withOpacity(0.5), // Set the desired shadow color
-                    spreadRadius: 1, // Set the desired spread radius
-                    blurRadius: 6, // Set the desired blur radius
+                    color: Colors.grey.withOpacity(0.5),
+                    blurRadius: 6,
                   ),
                 ],
                 borderRadius: BorderRadius.circular(24),
               ),
               child: BottomNavigationBar(
+                backgroundColor: Colors.white,
                 showSelectedLabels: false,
                 showUnselectedLabels: false,
                 items: const [
