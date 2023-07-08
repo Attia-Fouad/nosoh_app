@@ -5,7 +5,7 @@ import '../../../core/assets_data.dart';
 import '../../../core/colors.dart';
 import '../../../core/styles.dart';
 import '../../../shared_components.dart';
-import 'buil_bottom_sheet_item.dart';
+import 'build_bottom_sheet_item.dart';
 
 class BuildFilteringBottomSheet extends StatelessWidget {
   const BuildFilteringBottomSheet({super.key});

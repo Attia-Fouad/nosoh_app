@@ -8,11 +8,11 @@ import '../../../core/styles.dart';
 class BuildSearchBar extends StatelessWidget {
   const BuildSearchBar({
     super.key,
-    required this.onPressed1,
-    required this.onPressed2,
+    required this.FilteringOnPressed,
+    required this.sortingOnPressed,
   });
-  final void Function()? onPressed1;
-  final void Function()? onPressed2;
+  final void Function()? sortingOnPressed;
+  final void Function()? FilteringOnPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -51,14 +51,14 @@ class BuildSearchBar extends StatelessWidget {
         ),
         IconButton(
           padding: EdgeInsets.zero,
-          onPressed: onPressed1,
+          onPressed: FilteringOnPressed,
           icon: Image.asset(
             AssetsData.icon1Image,
           ),
         ),
         IconButton(
           padding: EdgeInsets.zero,
-          onPressed: onPressed2,
+          onPressed: sortingOnPressed,
           icon: Image.asset(
             AssetsData.icon2Image,
           ),

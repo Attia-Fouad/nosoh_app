@@ -57,4 +57,9 @@ abstract class AppStrings {
   static const favorite = 'المفضلة';
   static const myOpinions = 'ارائي';
   static const apply = 'تطبيق';
+  static const sorting = 'الفرز';
+  static const profitUpToDown = 'الأرباح: من الأعلى للأقل';
+  static const profitDownToUp = 'الأرباح: من الأقل للأعلى';
+  static const newsOpinions = 'احدث الاراء';
+  static const oldestOpinions = 'اقدم الاراء';
 }
