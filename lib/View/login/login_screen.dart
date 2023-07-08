@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:nosoh_app/core/app_strings.dart';
+import 'package:nosoh_app/core/assets_data.dart';
 import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/core/styles.dart';
 
@@ -42,6 +43,21 @@ class _LoginScreenState extends State<LoginScreen> {
             child: ListView(
               shrinkWrap: true,
               children: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      AssetsData.logoImage,
+                      fit: BoxFit.cover,
+                      width: 70,
+                      height: 70,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 35,
+                ),
                 Text(
                   AppStrings.yourPhoneNumber,
                   style: Styles.textStyle30Bold,
@@ -61,9 +77,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     Expanded(
                       child: IntlPhoneField(
                         //disableLengthCheck: true,
-
                         validator: (value) {
-                          if (value?.completeNumber.length != 10) {
+                          if (value!.number.isEmpty) {
+                            return AppStrings.shouldNotBeEmpty;
+                          }
+                          if (value.completeNumber.length != 10) {
                             return AppStrings.phoneValidator;
                           }
                           return null;
@@ -192,13 +210,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 70,
                 ),
                 defaultButton(
-                  color: controller.text.length == 10
+                  color: controller.text.length == 10 && acceptTerms
                       ? HexColor('#353448')
                       : HexColor('#353448').withOpacity(0.5),
                   text: AppStrings.next,
                   textStyle: Styles.textStyle24Medium,
                   onPressed: () {
-                    if (formKey.currentState!.validate()) {
+                    if (formKey.currentState!.validate() && acceptTerms) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(

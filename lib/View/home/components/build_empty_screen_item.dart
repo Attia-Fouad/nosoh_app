@@ -42,8 +42,8 @@ class BuildEmptyScreenItem extends StatelessWidget {
                   child: Text(
                     AppStrings.goToMessage,
                     style: Styles.textStyle14Medium.copyWith(
-                      color: myColor,
                       decoration: TextDecoration.underline,
+                      color: myColor,
                     ),
                   ),
                 ),

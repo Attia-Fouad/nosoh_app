@@ -21,6 +21,7 @@ abstract class AppStrings {
   static const understandTheRisks = 'فهم المخاطر';
   static const and = 'و';
   static const phoneValidator = 'رقم الجوال لازم يكون 10 أرقام';
+  static const shouldNotBeEmpty = 'رقم الجوال لا يمكن ان يكون فارغأ';
   static const confirmPhoneNumber = 'تأكيد رقم الجوال';
   static const confirmPhoneNumberMessage = 'اكتب الرمز اللي جاك على رقم الجوال';
   static const receiveCodeIn = 'يوصلك الرمز خلال';
