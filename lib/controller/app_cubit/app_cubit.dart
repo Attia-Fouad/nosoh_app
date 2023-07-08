@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nosoh_app/View/analysts_list/analysts_list_screen.dart';
 import 'package:nosoh_app/controller/app_cubit/app_state.dart';
 
 import '../../View/home/home_screen.dart';
@@ -19,7 +20,7 @@ class AppCubit extends Cubit<AppStates> {
   ];
   List<Widget> screens = [
     const HomeScreen(),
-    const HomeScreen(),
+    const AnalystsListScreen(),
     const HomeScreen(),
     const HomeScreen(),
   ];

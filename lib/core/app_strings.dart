@@ -67,4 +67,9 @@ abstract class AppStrings {
       'للاستفادة من الخدمة وفهمها أكثر يمكنك العثور على مقطع فيديو توضيحي أدناه';
   static const contactWithCustomerService = 'التواصل مع فريق خدمة العملاء';
   static const close = 'إغلاق';
+  static const mosharyMohammed = 'مشاري محمد الحربي';
+  static const saleOpinions = 'اراء بيع';
+  static const buyOpinions = 'اراء شراء';
+  static const successRate = 'نسبة النجاح';
+  static const follow = 'متابعة';
 }
