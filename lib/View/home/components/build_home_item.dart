@@ -12,21 +12,23 @@ class BuildHomeItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(14),
-          child: Material(
-            elevation: 8,
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(15),
-                  border: Border.all(
-                    color: notificationBorderColor,
-                    width: 0.2,
-                  )),
-              child: bigContainerChild(),
-            ),
-          ),
+        Container(
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  blurRadius: 1,
+                  //spreadRadius: 1,
+                ),
+              ],
+              border: Border.all(
+                color: notificationBorderColor,
+                width: 0.2,
+              )),
+          child: bigContainerChild(),
         ),
         const SizedBox(
           height: 8,
@@ -37,31 +39,34 @@ class BuildHomeItem extends StatelessWidget {
   }
 }
 
-Widget lastPartOfHomeItem() => Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: smallContainerColor,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 14),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              AppStrings.policy,
-              maxLines: null,
-              style: Styles.textStyle12Medium,
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                AppStrings.seeIt,
-                style: Styles.textStyle12Medium
-                    .copyWith(decoration: TextDecoration.underline),
+Widget lastPartOfHomeItem() => Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: smallContainerColor,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                AppStrings.policy,
+                maxLines: null,
+                style: Styles.textStyle12Medium,
               ),
-            )
-          ],
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  AppStrings.seeIt,
+                  style: Styles.textStyle12Medium
+                      .copyWith(decoration: TextDecoration.underline),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
