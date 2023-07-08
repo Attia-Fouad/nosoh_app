@@ -20,48 +20,49 @@ class BuildSortingBottomSheet extends StatelessWidget {
             topRight: Radius.circular(50),
           )),
       child: Padding(
-        padding: const EdgeInsets.all(32.0),
-        child: Stack(
-          alignment: AlignmentDirectional.topCenter,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 32.0,
+        ),
+        child: Column(
           children: [
-            Positioned(
-              top: -20,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Image.asset(
-                  AssetsData.dragImage,
-                  color: dragImageColor,
-                ),
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Image.asset(
+                AssetsData.dragImage,
+                color: dragImageColor,
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                const SizedBox(
-                  height: 30,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Text(
-                      AppStrings.sorting,
-                      style: Styles.textStyle24Medium.copyWith(color: myColor),
-                    )
-                  ],
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                buildElements(),
-                const SizedBox(
-                  height: 40,
-                ),
-                buildDefaultButton(),
-              ],
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Text(
+                        AppStrings.sorting,
+                        style:
+                            Styles.textStyle24Medium.copyWith(color: myColor),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  buildElements(),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  buildDefaultButton(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
             ),
           ],
         ),

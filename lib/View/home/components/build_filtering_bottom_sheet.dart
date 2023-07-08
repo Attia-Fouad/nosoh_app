@@ -21,85 +21,81 @@ class BuildFilteringBottomSheet extends StatelessWidget {
             topRight: Radius.circular(50),
           )),
       child: Padding(
-        padding: const EdgeInsets.all(32.0),
-        child: Stack(
-          alignment: AlignmentDirectional.topCenter,
+        padding: const EdgeInsets.symmetric(horizontal: 32.0),
+        child: Column(
           children: [
-            Positioned(
-              top: -20,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Image.asset(
-                  AssetsData.dragImage,
-                  color: dragImageColor,
-                ),
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Image.asset(
+                AssetsData.dragImage,
+                color: dragImageColor,
               ),
             ),
-            ListView(
-              shrinkWrap: true,
-              children: [
-                const SizedBox(
-                  height: 30,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Text(
-                      AppStrings.filtering,
-                      style: Styles.textStyle24Medium.copyWith(color: myColor),
-                    )
-                  ],
-                ),
-                const SizedBox(
-                  height: 40,
-                ),
-                Text(
-                  AppStrings.analystOpinions,
-                  style: Styles.textStyle16Medium.copyWith(
-                    color: containerTextColor,
+            Expanded(
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Text(
+                        AppStrings.filtering,
+                        style:
+                            Styles.textStyle24Medium.copyWith(color: myColor),
+                      )
+                    ],
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                buildRow1(),
-                const SizedBox(
-                  height: 25,
-                ),
-                Text(
-                  AppStrings.analysisType,
-                  style: Styles.textStyle16Medium.copyWith(
-                    color: containerTextColor,
+                  const SizedBox(
+                    height: 40,
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                buildRow2(),
-                const SizedBox(
-                  height: 25,
-                ),
-                Text(
-                  AppStrings.analysts,
-                  style: Styles.textStyle16Medium.copyWith(
-                    color: containerTextColor,
+                  Text(
+                    AppStrings.analystOpinions,
+                    style: Styles.textStyle16Medium.copyWith(
+                      color: containerTextColor,
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                buildRow3(),
-                const SizedBox(
-                  height: 50,
-                ),
-                buildDefaultButton(),
-                const SizedBox(
-                  height: 10,
-                ),
-              ],
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  buildRow1(),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Text(
+                    AppStrings.analysisType,
+                    style: Styles.textStyle16Medium.copyWith(
+                      color: containerTextColor,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  buildRow2(),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  Text(
+                    AppStrings.analysts,
+                    style: Styles.textStyle16Medium.copyWith(
+                      color: containerTextColor,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  buildRow3(),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  buildDefaultButton(),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
