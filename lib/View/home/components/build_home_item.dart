@@ -164,9 +164,10 @@ Widget thirdPartOfContainer() {
     padding: const EdgeInsets.all(10.0),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               AppStrings.priceWhenAnalysis,
@@ -222,7 +223,7 @@ Widget thirdPartOfContainer() {
           ],
         ),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               AppStrings.targetPrice,
@@ -278,7 +279,7 @@ Widget thirdPartOfContainer() {
           ],
         ),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
               AppStrings.todayPrice,
