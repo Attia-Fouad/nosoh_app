@@ -118,9 +118,8 @@ class BuildSortingBottomSheet extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.5),
-                  spreadRadius: 1,
-                  offset:
-                      const Offset(0, 1), // changes the position of the shadow
+                  blurRadius: 2,
+                  offset: const Offset(0, 1),
                 ),
               ],
               border: Border.all(color: notificationBorderColor, width: 0.2),
