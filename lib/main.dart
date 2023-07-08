@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:nosoh_app/core/colors.dart';
 
-import 'View/select_language/select_language_screen.dart';
+import 'View/splash/splash_screen.dart';
 import 'core/styles.dart';
 import 'helper/my_bloc_observer.dart';
 
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
         ),
       ),
-      home: const SelectLanguageScreen(),
+      home: const SplashScreen(),
     );
   }
 }
