@@ -3,6 +3,12 @@ import 'package:nosoh_app/core/styles.dart';
 
 import '../../core/app_strings.dart';
 import '../../core/colors.dart';
+import '../../shared_components.dart';
+import 'components/coupon_field_item.dart';
+import 'components/invoice_details_item.dart';
+import 'components/invoice_total_item.dart';
+import 'components/payment_method_item.dart';
+import 'components/subscribe_details_item.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});
@@ -34,22 +40,78 @@ class PaymentScreen extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            Container(
-              height: 200,
-              decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        blurRadius: 2,
-                        offset: const Offset(0, 1)),
-                  ],
-                  borderRadius: BorderRadius.circular(10),
-                  color: sortingContainerColor,
-                  border: Border.all(
-                    width: 0.2,
-                    color: notificationBorderColor,
-                  )),
-            )
+            subscribeDetailsItem(),
+            const SizedBox(
+              height: 15,
+            ),
+            couponFieldItem(),
+            const SizedBox(
+              height: 6,
+            ),
+            Row(
+              children: [
+                Text(
+                  AppStrings.doNotHaveCode,
+                  style: Styles.textStyle12Medium.copyWith(
+                    color: suvaGreyColor,
+                  ),
+                ),
+                const SizedBox(
+                  width: 4,
+                ),
+                Text(
+                  AppStrings.contactWithCustomerService,
+                  style: Styles.textStyle12Medium.copyWith(
+                      color: customOrangeColor,
+                      decoration: TextDecoration.underline),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            invoiceDetailsItem(),
+            const SizedBox(
+              height: 5,
+            ),
+            invoiceTotalItem(),
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              AppStrings.paymentMethod,
+              style: Styles.textStyle19Bold,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            paymentMethodItem(),
+            const SizedBox(
+              height: 11,
+            ),
+            Text(
+              AppStrings.policyAndPrivacy,
+              style: Styles.textStyle14Medium.copyWith(
+                color: customOrangeColor,
+              ),
+            ),
+            const SizedBox(
+              height: 11,
+            ),
+            Text(
+              AppStrings.cancelSubscriptionConditions,
+              style: Styles.textStyle14Medium.copyWith(
+                color: customOrangeColor,
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            defaultButton(
+                color: myColor,
+                text: AppStrings.subscribeNow,
+                textStyle: Styles.textStyle24Medium,
+                onPressed: () {}),
           ],
         ),
       ),

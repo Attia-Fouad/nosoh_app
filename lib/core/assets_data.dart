@@ -20,6 +20,8 @@ class AssetsData {
   static const whatsAppIcon = 'assets/icons/whatsapp.svg';
   static const addIcon = 'assets/icons/add.svg';
   static const arrowDownIcon = 'assets/icons/arrowDown.svg';
+  static const madaIcon = 'assets/icons/madaIcon.svg';
+  static const visaIcon = 'assets/icons/visaIcon.svg';
 
   static const onBoardingAnimation1 =
       'assets/animations/onBoardingAnimation1.json';

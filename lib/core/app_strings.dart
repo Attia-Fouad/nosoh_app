@@ -109,7 +109,7 @@ abstract class AppStrings {
   static const subscriptionDetails = 'تفاصيل الاشتراك';
   static const analystsOpinionService = 'خدمة اراء المحللين';
   static const subscriptionPeriod = 'مدة الاشتراك';
-  static const sizMonth = '6 اشهر';
+  static const sixMonth = '6 اشهر';
   static const enterCoupon = 'ادخل رمز الكوبون';
   static const doNotHaveCode = 'ليس لديك كود؟';
   static const startDate = 'تاريخ البداية';

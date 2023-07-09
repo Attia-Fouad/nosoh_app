@@ -41,11 +41,24 @@ abstract class Styles {
     fontFamily: myFontMedium,
     decoration: TextDecoration.none,
   );
+  static TextStyle textStyle15Bold = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+    color: myColor,
+    fontFamily: myFontBold,
+    decoration: TextDecoration.none,
+  );
   static TextStyle textStyle16Medium = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
     color: suvaGreyColor,
     fontFamily: myFontMedium,
+  );
+  static TextStyle textStyle16Bold = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: myColor,
+    fontFamily: myFontBold,
   );
   static TextStyle textStyle17Medium = TextStyle(
     fontSize: 17,
