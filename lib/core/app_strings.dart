@@ -104,5 +104,6 @@ abstract class AppStrings {
   static const addNewOpinion = 'اضافة رأي جديد';
   static const addRecommendationMessage =
       '* عزيزنا المستخدم، بإمكانك إضافة ونشر تحليلاتك خلال فترة إغلاق السوق السعودي لكنها ستكون خاصة بك فقط';
+  static const cancel = 'إلغاء';
   static const con = '';
 }

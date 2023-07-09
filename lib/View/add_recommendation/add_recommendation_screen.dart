@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nosoh_app/View/add_recommendation/components/build_recommendation_screen_Item.dart';
+import 'package:nosoh_app/View/add_recommendation/confirming_recommendation_Screen.dart';
 import 'package:nosoh_app/core/assets_data.dart';
 import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/core/styles.dart';
@@ -167,7 +168,14 @@ class AddRecommendationScreen extends StatelessWidget {
             ),
             defaultButton(
               color: myColor,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const ConfirmingRecommendationScreen(),
+                    ));
+              },
               text: AppStrings.next,
               textStyle: Styles.textStyle24Medium,
             ),
