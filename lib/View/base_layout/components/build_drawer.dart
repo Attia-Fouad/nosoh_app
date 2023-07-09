@@ -6,6 +6,7 @@ import '../../../core/app_strings.dart';
 import '../../../core/assets_data.dart';
 import '../../../core/colors.dart';
 import '../../../core/styles.dart';
+import '../../home/components/build_help_bottom_sheet.dart';
 import 'build_drawer_item.dart';
 
 class BuildDrawer extends StatelessWidget {
@@ -92,7 +93,18 @@ class BuildDrawer extends StatelessWidget {
                   height: 7,
                 ),
                 BuildDrawerItem(
-                  onTap: () {},
+                  onTap: () {
+                    showModalBottomSheet<void>(
+                      context: context,
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(50),
+                      )),
+                      builder: (BuildContext context) {
+                        return const BuildHelpBottomSheet();
+                      },
+                    );
+                  },
                   text: AppStrings.help,
                   icon: Icon(
                     Icons.help_outline_sharp,
