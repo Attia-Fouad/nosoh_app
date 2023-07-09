@@ -1,13 +1,14 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:lottie/lottie.dart';
+import 'package:nosoh_app/View/base_layout/base_layout_screen.dart';
 import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/shared_components.dart';
 
 import '../../core/app_strings.dart';
 import '../../core/assets_data.dart';
 import '../../core/styles.dart';
-import 'components/build_quistion_item.dart';
 
 class CompleteRegistrationDoneScreen extends StatelessWidget {
   const CompleteRegistrationDoneScreen({super.key});
@@ -26,37 +27,36 @@ class CompleteRegistrationDoneScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(19.0),
-        child: ListView(
-          shrinkWrap: true,
+        child: Column(
           children: [
             buildIndicatorItem(),
-            const SizedBox(
-              height: 36,
+            Center(
+              child: Column(
+                children: [
+                  Lottie.asset(AssetsData.doneAnimation),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    AppStrings.doneMessage,
+                    style: Styles.textStyle30Bold,
+                  ),
+                ],
+              ),
             ),
-            Text(
-              AppStrings.fastQuest,
-              style: Styles.textStyle30Bold,
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            Text(
-              AppStrings.lawRole,
-              style: Styles.textStyle16Medium,
-            ),
-            const BuildQuistionItem(text: AppStrings.q1),
-            const BuildQuistionItem(text: AppStrings.q2),
-            const BuildQuistionItem(text: AppStrings.q3),
-            const BuildQuistionItem(text: AppStrings.q4),
-            const BuildQuistionItem(text: AppStrings.q5),
-            const SizedBox(
-              height: 35,
-            ),
+            const Spacer(),
             defaultButton(
-                color: myColor.withOpacity(0.5),
+                color: myColor,
                 text: AppStrings.next,
                 textStyle: Styles.textStyle24Medium,
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BaseLayoutScreen(),
+                      ),
+                      (route) => false);
+                }),
           ],
         ),
       ),
