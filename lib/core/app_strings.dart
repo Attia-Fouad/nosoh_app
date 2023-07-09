@@ -90,4 +90,19 @@ abstract class AppStrings {
   static const priceWhenAnalysis = 'السعر وقت التحليل';
   static const targetPrice = 'السعر المستهدف';
   static const todayPrice = 'السعر اليوم';
+  static const companyNameWithStar = 'اسم الشركة *';
+  static const currentPrice = 'السعر الحالي';
+  static const theProcess = 'العملية';
+  static const targetPriceWithStar = 'السعر المستهدف *';
+  static const stopLosingWithStar = 'وقف الخسارة *';
+  static const priceChanges = 'التغير في السعر ٪';
+  static const losingChanges = 'التغير للخسارة ٪';
+  static const periodWithStar = 'المدة*';
+  static const whatIsYouAnalysis = 'ما تحليلك؟';
+  static const attachImage = 'أرفق صورة';
+  static const acceptedEXE = 'الصيغ المقبولة هي png , jpg';
+  static const addNewOpinion = 'اضافة رأي جديد';
+  static const addRecommendationMessage =
+      '* عزيزنا المستخدم، بإمكانك إضافة ونشر تحليلاتك خلال فترة إغلاق السوق السعودي لكنها ستكون خاصة بك فقط';
+  static const con = '';
 }

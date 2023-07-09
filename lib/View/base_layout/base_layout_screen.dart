@@ -9,6 +9,7 @@ import 'package:nosoh_app/controller/app_cubit/app_state.dart';
 import 'package:nosoh_app/core/colors.dart';
 
 import '../../core/styles.dart';
+import '../add_recommendation/add_recommendation_screen.dart';
 import 'components/build_drawer.dart';
 
 class BaseLayoutScreen extends StatefulWidget {
@@ -81,7 +82,14 @@ class _BaseLayoutScreenState extends State<BaseLayoutScreen> {
             body: cubit.screens[cubit.currentIndex],
             floatingActionButton: cubit.currentIndex == 0
                 ? FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const AddRecommendationScreen(),
+                          ));
+                    },
                     child: Container(
                       width: 60,
                       height: 60,
