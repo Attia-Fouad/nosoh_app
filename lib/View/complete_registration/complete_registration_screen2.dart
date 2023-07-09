@@ -27,74 +27,80 @@ class CompleteRegistrationScreen2 extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(19.0),
-        child: ListView(
-          shrinkWrap: true,
+        child: Column(
           children: [
             buildIndicatorItem(),
-            const SizedBox(
-              height: 36,
+            Expanded(
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  const SizedBox(
+                    height: 36,
+                  ),
+                  Text(
+                    AppStrings.letsCompleteYorProfile,
+                    style: Styles.textStyle30Bold,
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    AppStrings.needSomeInfo,
+                    style: Styles.textStyle16Medium,
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  BuildCompleteRegistrationItem(
+                    text: AppStrings.status,
+                    icon: SvgPicture.asset(AssetsData.arrowDownIcon),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  BuildCompleteRegistrationItem(
+                    text: AppStrings.familyNumber,
+                    icon: SvgPicture.asset(AssetsData.arrowDownIcon),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  BuildCompleteRegistrationItem(
+                    text: AppStrings.yearlyIncome,
+                    icon: SvgPicture.asset(AssetsData.arrowDownIcon),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  BuildCompleteRegistrationItem(
+                    text: AppStrings.totalSave,
+                    icon: SvgPicture.asset(AssetsData.arrowDownIcon),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  BuildCompleteRegistrationItem(
+                    text: AppStrings.yourBankAcc,
+                    icon: SvgPicture.asset(AssetsData.arrowDownIcon),
+                  ),
+                  const SizedBox(
+                    height: 70,
+                  ),
+                  defaultButton(
+                      color: myColor.withOpacity(0.5),
+                      text: AppStrings.next,
+                      textStyle: Styles.textStyle24Medium,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const CompleteRegistrationScreen3(),
+                            ));
+                      }),
+                ],
+              ),
             ),
-            Text(
-              AppStrings.letsCompleteYorProfile,
-              style: Styles.textStyle30Bold,
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            Text(
-              AppStrings.needSomeInfo,
-              style: Styles.textStyle16Medium,
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.status,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.familyNumber,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.yearlyIncome,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.totalSave,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.yourBankAcc,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 70,
-            ),
-            defaultButton(
-                color: myColor.withOpacity(0.5),
-                text: AppStrings.next,
-                textStyle: Styles.textStyle24Medium,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            const CompleteRegistrationScreen3(),
-                      ));
-                }),
           ],
         ),
       ),

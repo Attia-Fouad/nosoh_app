@@ -27,44 +27,50 @@ class CompleteRegistrationScreen3 extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(19.0),
-        child: ListView(
-          shrinkWrap: true,
+        child: Column(
           children: [
             buildIndicatorItem(),
-            const SizedBox(
-              height: 36,
+            Expanded(
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  const SizedBox(
+                    height: 36,
+                  ),
+                  Text(
+                    AppStrings.fastQuest,
+                    style: Styles.textStyle30Bold,
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    AppStrings.lawRole,
+                    style: Styles.textStyle16Medium,
+                  ),
+                  const BuildQuistionItem(text: AppStrings.q1),
+                  const BuildQuistionItem(text: AppStrings.q2),
+                  const BuildQuistionItem(text: AppStrings.q3),
+                  const BuildQuistionItem(text: AppStrings.q4),
+                  const BuildQuistionItem(text: AppStrings.q5),
+                  const SizedBox(
+                    height: 35,
+                  ),
+                  defaultButton(
+                      color: myColor.withOpacity(0.5),
+                      text: AppStrings.next,
+                      textStyle: Styles.textStyle24Medium,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const CompleteRegistrationDoneScreen(),
+                            ));
+                      }),
+                ],
+              ),
             ),
-            Text(
-              AppStrings.fastQuest,
-              style: Styles.textStyle30Bold,
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            Text(
-              AppStrings.lawRole,
-              style: Styles.textStyle16Medium,
-            ),
-            const BuildQuistionItem(text: AppStrings.q1),
-            const BuildQuistionItem(text: AppStrings.q2),
-            const BuildQuistionItem(text: AppStrings.q3),
-            const BuildQuistionItem(text: AppStrings.q4),
-            const BuildQuistionItem(text: AppStrings.q5),
-            const SizedBox(
-              height: 35,
-            ),
-            defaultButton(
-                color: myColor.withOpacity(0.5),
-                text: AppStrings.next,
-                textStyle: Styles.textStyle24Medium,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            const CompleteRegistrationDoneScreen(),
-                      ));
-                }),
           ],
         ),
       ),

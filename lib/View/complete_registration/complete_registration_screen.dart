@@ -27,51 +27,57 @@ class CompleteRegistrationScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(19.0),
-        child: ListView(
-          shrinkWrap: true,
+        child: Column(
           children: [
             buildIndicatorItem(),
-            const SizedBox(
-              height: 36,
+            Expanded(
+              child: ListView(
+                shrinkWrap: true,
+                children: [
+                  const SizedBox(
+                    height: 36,
+                  ),
+                  Text(
+                    AppStrings.letsCompleteYorProfile,
+                    style: Styles.textStyle30Bold,
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    AppStrings.needSomeInfo,
+                    style: Styles.textStyle16Medium,
+                  ),
+                  const SizedBox(
+                    height: 40,
+                  ),
+                  const BuildCompleteRegistrationItem(
+                    text: AppStrings.idNumber,
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const BuildCompleteRegistrationItem(
+                    text: AppStrings.birthdate,
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  defaultButton(
+                      color: myColor.withOpacity(0.5),
+                      text: AppStrings.next,
+                      textStyle: Styles.textStyle24Medium,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const CompleteRegistrationScreen2(),
+                            ));
+                      }),
+                ],
+              ),
             ),
-            Text(
-              AppStrings.letsCompleteYorProfile,
-              style: Styles.textStyle30Bold,
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            Text(
-              AppStrings.needSomeInfo,
-              style: Styles.textStyle16Medium,
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            const BuildCompleteRegistrationItem(
-              text: AppStrings.idNumber,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const BuildCompleteRegistrationItem(
-              text: AppStrings.birthdate,
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            defaultButton(
-                color: myColor.withOpacity(0.5),
-                text: AppStrings.next,
-                textStyle: Styles.textStyle24Medium,
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            const CompleteRegistrationScreen2(),
-                      ));
-                }),
           ],
         ),
       ),
