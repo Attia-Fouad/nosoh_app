@@ -124,5 +124,28 @@ abstract class AppStrings {
   static const policyAndPrivacy = 'الشروط والأحكام وسياسة الخصوصية';
   static const cancelSubscriptionConditions = 'شروط إلغاء اشتراكك';
   static const subscribeNow = 'أشترك الان';
+  static const personalInformation = 'البيانات الشخصية';
+  static const financeinformation = 'البيانات المالية';
+  static const dangerAware = 'معرفة المخاطر';
+  static const letsCompleteYorProfile = 'يلا نكمل ملفك؟';
+  static const needSomeInfo = 'نحتاج منك شوية معلومات ضرورية عشان نقدر نكمل';
+  static const idNumber = 'رقم هويتك';
+  static const birthdate = 'تاريخ ميلادك';
+  static const status = 'الحالة الاجتماعية';
+  static const familyNumber = 'عدد أفراد العائلة';
+  static const yearlyIncome = 'الدخل السنوي';
+  static const totalSave = 'صافي المدخرات';
+  static const yourBankAcc = 'حسابك في أي بنك';
+  static const fastQuest = 'استبيان على السريع';
+  static const lawRole =
+      'وذلك امتثالاً للمادة 42 “فهم المخاطر” والمادة 43 “الملاءمة” من لائحة الأشخاص المرخص لهم';
+  static const q1 = 'هل أنت على دراية كاملة بمخاطر الاستثمار في سوق الأسهم؟';
+  static const yes = 'نعم';
+  static const no = 'لا';
+  static const q2 = 'هل أنت على دراية كاملة بمخاطر الاستثمار في سوق الأسهم؟';
+  static const q3 = 'هل لديك الخبرة الكافية للاستثمار في سوق الأسهم؟';
+  static const q4 = 'هل تعلم أن عليك الموازنة بين المخاطر والمكافآت؟';
+  static const q5 = 'هل تعلم أن هذا التطبيق لا يقدم أي توصيات استثمارية؟';
+  static const doneMessage = 'أمورك في السليم';
   static const con = '';
 }

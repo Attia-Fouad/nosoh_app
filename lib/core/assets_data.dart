@@ -22,7 +22,11 @@ class AssetsData {
   static const arrowDownIcon = 'assets/icons/arrowDown.svg';
   static const madaIcon = 'assets/icons/madaIcon.svg';
   static const visaIcon = 'assets/icons/visaIcon.svg';
+  static const informationIcon = 'assets/icons/informationIcon.svg';
+  static const moneyIcon = 'assets/icons/moneyIcon.svg';
+  static const warningIcon = 'assets/icons/warningIcon.svg';
 
+  static const doneAnimation = 'assets/animations/doneAnimation.json';
   static const onBoardingAnimation1 =
       'assets/animations/onBoardingAnimation1.json';
   static const onBoardingAnimation2 =

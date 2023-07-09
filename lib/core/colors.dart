@@ -22,5 +22,5 @@ Color dragImageColor = HexColor('#707070');
 Color sortingContainerColor = HexColor('#FDFDFD');
 Color analystsContainerColor = HexColor('#D1D1D11A');
 Color followButtonColor = HexColor('#6F6BB2');
-Color customBlue = HexColor('#6F6BB233');
+Color customBlue = HexColor('#6F6BB2');
 Color smallContainerColor = HexColor('#FBFBFB');

@@ -10,6 +10,12 @@ abstract class Styles {
     color: formFieldTextErrorColor,
     fontFamily: myFontMedium,
   );
+  static TextStyle textStyle11Bold = TextStyle(
+    fontSize: 11,
+    fontWeight: FontWeight.bold,
+    color: customBlue,
+    fontFamily: myFontBold,
+  );
   static TextStyle textStyle12Regular = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w500,

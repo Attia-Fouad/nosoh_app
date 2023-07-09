@@ -4,6 +4,7 @@ import 'package:nosoh_app/core/styles.dart';
 import '../../core/app_strings.dart';
 import '../../core/colors.dart';
 import '../../shared_components.dart';
+import '../complete_registration/complete_registration_screen.dart';
 import 'components/coupon_field_item.dart';
 import 'components/invoice_details_item.dart';
 import 'components/invoice_total_item.dart';
@@ -111,7 +112,14 @@ class PaymentScreen extends StatelessWidget {
                 color: myColor,
                 text: AppStrings.subscribeNow,
                 textStyle: Styles.textStyle24Medium,
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            const CompleteRegistrationScreen(),
+                      ));
+                }),
           ],
         ),
       ),
