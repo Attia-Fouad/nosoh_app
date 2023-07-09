@@ -7,6 +7,7 @@ import '../../../core/assets_data.dart';
 import '../../../core/colors.dart';
 import '../../../core/styles.dart';
 import '../../home/components/build_help_bottom_sheet.dart';
+import '../../my_bills/my_bills_screen.dart';
 import 'build_drawer_item.dart';
 
 class BuildDrawer extends StatelessWidget {
@@ -69,7 +70,9 @@ class BuildDrawer extends StatelessWidget {
                   height: 7,
                 ),
                 BuildDrawerItem(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const MyBillsScreen(),));
+                  },
                   text: AppStrings.myBills,
                   icon: Icon(
                     Icons.receipt_long_outlined,

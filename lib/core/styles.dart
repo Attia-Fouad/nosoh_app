@@ -4,6 +4,12 @@ import 'package:nosoh_app/core/constants.dart';
 import 'colors.dart';
 
 abstract class Styles {
+  static TextStyle textStyle10Medium = const TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+    fontFamily: myFontMedium,
+  );
   static TextStyle textStyle12Medium = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w500,
@@ -27,6 +33,12 @@ abstract class Styles {
     fontWeight: FontWeight.w500,
     color: suvaGreyColor,
     fontFamily: myFontMedium,
+  );
+  static TextStyle textStyle13Bold = TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.bold,
+    color: myColor,
+    fontFamily: myFontBold,
   );
   static TextStyle textStyle14Medium = TextStyle(
     fontSize: 14,

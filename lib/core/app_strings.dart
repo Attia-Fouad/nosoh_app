@@ -147,5 +147,6 @@ abstract class AppStrings {
   static const q4 = 'هل تعلم أن عليك الموازنة بين المخاطر والمكافآت؟';
   static const q5 = 'هل تعلم أن هذا التطبيق لا يقدم أي توصيات استثمارية؟';
   static const doneMessage = 'أمورك في السليم';
+  static const downloadMyBill = 'تحميل الفاتورة';
   static const con = '';
 }
