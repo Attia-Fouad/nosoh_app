@@ -1,17 +1,17 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nosoh_app/View/complete_registration/complete_registration_screen3.dart';
 import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/shared_components.dart';
 
 import '../../core/app_strings.dart';
 import '../../core/assets_data.dart';
 import '../../core/styles.dart';
-import 'components/build_complete_registration_item.dart';
+import 'complete_registration_done_screen.dart';
+import 'components/build_quistion_item.dart';
 
-class CompleteRegistrationScreen2 extends StatelessWidget {
-  const CompleteRegistrationScreen2({super.key});
+class CompleteRegistrationScreen3 extends StatelessWidget {
+  const CompleteRegistrationScreen3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,53 +35,23 @@ class CompleteRegistrationScreen2 extends StatelessWidget {
               height: 36,
             ),
             Text(
-              AppStrings.letsCompleteYorProfile,
+              AppStrings.fastQuest,
               style: Styles.textStyle30Bold,
             ),
             const SizedBox(
               height: 12,
             ),
             Text(
-              AppStrings.needSomeInfo,
+              AppStrings.lawRole,
               style: Styles.textStyle16Medium,
             ),
+            const BuildQuistionItem(text: AppStrings.q1),
+            const BuildQuistionItem(text: AppStrings.q2),
+            const BuildQuistionItem(text: AppStrings.q3),
+            const BuildQuistionItem(text: AppStrings.q4),
+            const BuildQuistionItem(text: AppStrings.q5),
             const SizedBox(
-              height: 40,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.status,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.familyNumber,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.yearlyIncome,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.totalSave,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            BuildCompleteRegistrationItem(
-              text: AppStrings.yourBankAcc,
-              icon: SvgPicture.asset(AssetsData.arrowDownIcon),
-            ),
-            const SizedBox(
-              height: 70,
+              height: 35,
             ),
             defaultButton(
                 color: myColor.withOpacity(0.5),
@@ -92,7 +62,7 @@ class CompleteRegistrationScreen2 extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
-                            const CompleteRegistrationScreen3(),
+                            const CompleteRegistrationDoneScreen(),
                       ));
                 }),
           ],
@@ -158,7 +128,7 @@ class CompleteRegistrationScreen2 extends StatelessWidget {
                   lineLength: double.infinity,
                   lineThickness: 1.0,
                   dashLength: 2.0,
-                  dashColor: suvaGreyColor,
+                  dashColor: customBlue,
                   dashGapLength: 2.0,
                   dashGapColor: Colors.transparent,
                   dashGapRadius: 0.0,
@@ -168,7 +138,7 @@ class CompleteRegistrationScreen2 extends StatelessWidget {
                 children: [
                   SvgPicture.asset(
                     AssetsData.warningIcon,
-                    color: suvaGreyColor,
+                    color: customBlue,
                   ),
                   const SizedBox(
                     height: 11,
@@ -176,7 +146,7 @@ class CompleteRegistrationScreen2 extends StatelessWidget {
                   Text(
                     AppStrings.dangerAware,
                     style: Styles.textStyle11Bold.copyWith(
-                      color: suvaGreyColor,
+                      color: customBlue,
                     ),
                   ),
                 ],
