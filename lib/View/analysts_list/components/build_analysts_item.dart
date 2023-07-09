@@ -5,6 +5,7 @@ import '../../../core/app_strings.dart';
 import '../../../core/assets_data.dart';
 import '../../../core/colors.dart';
 import '../../../core/styles.dart';
+import '../../payment/payment_screen.dart';
 
 class BuildAnalystsItem extends StatelessWidget {
   const BuildAnalystsItem({super.key});
@@ -17,9 +18,9 @@ class BuildAnalystsItem extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color:
-                  Colors.grey.withOpacity(0.5), // Set the desired shadow color
-              blurRadius: 3,
+              color: Colors.grey.withOpacity(0.5),
+              blurRadius: 2,
+              offset: const Offset(0, 1),
             ),
           ],
           borderRadius: BorderRadius.circular(15)),
@@ -146,7 +147,13 @@ class BuildAnalystsItem extends StatelessWidget {
                   ),
                   Expanded(
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const PaymentScreen(),
+                            ));
+                      },
                       child: Container(
                         color: Colors.blue.withOpacity(0.3),
                         child: Column(

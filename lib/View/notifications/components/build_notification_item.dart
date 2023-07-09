@@ -18,9 +18,9 @@ class BuildNotificationItem extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5), // Set the desired shadow color
-            blurRadius: 2, // Set the desired blur radius
-            offset: const Offset(0, 1), // Set the desired offset
+            color: Colors.grey.withOpacity(0.5),
+            blurRadius: 2,
+            offset: const Offset(0, 1),
           ),
         ],
         borderRadius: BorderRadius.circular(15),

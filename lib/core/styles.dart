@@ -59,6 +59,12 @@ abstract class Styles {
     color: suvaGreyColor,
     fontFamily: myFontMedium,
   );
+  static TextStyle textStyle19Bold = TextStyle(
+    fontSize: 19,
+    fontWeight: FontWeight.bold,
+    color: myColor,
+    fontFamily: myFontBold,
+  );
   static TextStyle textStyle20Medium = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w500,

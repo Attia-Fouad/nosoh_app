@@ -105,5 +105,24 @@ abstract class AppStrings {
   static const addRecommendationMessage =
       '* عزيزنا المستخدم، بإمكانك إضافة ونشر تحليلاتك خلال فترة إغلاق السوق السعودي لكنها ستكون خاصة بك فقط';
   static const cancel = 'إلغاء';
+  static const payment = 'الدفع';
+  static const subscriptionDetails = 'تفاصيل الاشتراك';
+  static const analystsOpinionService = 'خدمة اراء المحللين';
+  static const subscriptionPeriod = 'مدة الاشتراك';
+  static const sizMonth = '6 اشهر';
+  static const enterCoupon = 'ادخل رمز الكوبون';
+  static const doNotHaveCode = 'ليس لديك كود؟';
+  static const startDate = 'تاريخ البداية';
+  static const endDate = 'تاريخ النهاية';
+  static const theTotal = 'المجموع';
+  static const discount = 'الخصم';
+  static const taxes = 'الضريبة المضافة (15%)';
+  static const total = 'الإجمالي';
+  static const paymentMethod = 'طريقة الدفع';
+  static const mada = 'مدى';
+  static const masterCard = 'ماستركارد / فيزا';
+  static const policyAndPrivacy = 'الشروط والأحكام وسياسة الخصوصية';
+  static const cancelSubscriptionConditions = 'شروط إلغاء اشتراكك';
+  static const subscribeNow = 'أشترك الان';
   static const con = '';
 }
