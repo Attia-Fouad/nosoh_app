@@ -11,6 +11,7 @@ import '../login/captcha_screen.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({super.key, required this.phoneNumber});
+
   final String phoneNumber;
 
   @override
@@ -19,10 +20,12 @@ class OTPScreen extends StatefulWidget {
 
 class _OTPScreenState extends State<OTPScreen> {
   final String phoneNumber;
+
   _OTPScreenState({required this.phoneNumber});
 
   var codeController = TextEditingController();
   bool completeOTP = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,6 +44,21 @@ class _OTPScreenState extends State<OTPScreen> {
             child: ListView(
           shrinkWrap: true,
           children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Image.asset(
+                  AssetsData.logoImage,
+                  fit: BoxFit.cover,
+                  width: 70,
+                  height: 70,
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             Text(
               AppStrings.confirmPhoneNumber,
               style: Styles.textStyle30Bold,
@@ -132,7 +150,8 @@ class _OTPScreenState extends State<OTPScreen> {
                 InkWell(
                   onTap: () {},
                   child: SvgPicture.asset(
-                    AssetsData.reloadingIcon, // Replace with your SVG file path
+                    AssetsData.reloadingIcon,
+                    // Replace with your SVG file path
                     width: 16, // Set the desired width
                     height: 16, // Set the desired height
                   ),

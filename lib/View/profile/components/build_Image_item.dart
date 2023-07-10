@@ -17,7 +17,7 @@ class BuildImageItem extends StatelessWidget {
             alignment: AlignmentDirectional.topCenter,
             child: Container(
               height: 30,
-              color: profileAppbarColors,
+              color: profileAppbarColors.withOpacity(0.1),
             ),
           ),
           const Positioned(

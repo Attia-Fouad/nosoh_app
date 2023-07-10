@@ -24,4 +24,4 @@ Color analystsContainerColor = HexColor('#D1D1D11A');
 Color followButtonColor = HexColor('#6F6BB2');
 Color customBlue = HexColor('#6F6BB2');
 Color smallContainerColor = HexColor('#FBFBFB');
-Color profileAppbarColors = HexColor('#6f6bb2').withOpacity(0.1);
+Color profileAppbarColors = HexColor('#6f6bb2');

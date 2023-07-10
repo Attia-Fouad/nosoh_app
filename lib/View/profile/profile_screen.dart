@@ -19,9 +19,9 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: profileAppbarColors,
+        backgroundColor: profileAppbarColors.withOpacity(0.1),
         systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: profileAppbarColors,
+          statusBarColor: profileAppbarColors.withOpacity(0.1),
         ),
         leading: IconButton(
           onPressed: () {
