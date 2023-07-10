@@ -13,6 +13,8 @@ class BuildEditFieldItem extends StatelessWidget {
     this.fill = false,
     this.suffixIcon,
     this.prefixIcon,
+    this.enabled = true,
+    this.maxLines = 1,
   });
 
   final String? Function(String?)? validator;
@@ -22,10 +24,14 @@ class BuildEditFieldItem extends StatelessWidget {
   final String? label;
   final Widget? suffixIcon;
   final Widget? prefixIcon;
+  final bool enabled;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: maxLines,
+      enabled: enabled,
       validator: validator,
       onChanged: onChanged,
       controller: controller,
@@ -43,6 +49,13 @@ class BuildEditFieldItem extends StatelessWidget {
           borderSide: BorderSide(
             width: 1,
             color: formFieldActiveBorderColor,
+          ),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide(
+            width: 1,
+            color: formFieldBorderColor,
           ),
         ),
         enabledBorder: fill

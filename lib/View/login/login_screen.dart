@@ -76,6 +76,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Expanded(
                       child: IntlPhoneField(
+                        textAlign: TextAlign.right,
+
                         //disableLengthCheck: true,
                         validator: (value) {
                           if (value!.number.isEmpty) {
