@@ -8,6 +8,7 @@ import '../../../core/colors.dart';
 import '../../../core/styles.dart';
 import '../../home/components/build_help_bottom_sheet.dart';
 import '../../my_bills/my_bills_screen.dart';
+import '../../profile/profile_screen.dart';
 import 'build_drawer_item.dart';
 
 class BuildDrawer extends StatelessWidget {
@@ -58,7 +59,13 @@ class BuildDrawer extends StatelessWidget {
                   height: 30,
                 ),
                 BuildDrawerItem(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ProfileScreen(),
+                        ));
+                  },
                   text: AppStrings.profile,
                   icon: Icon(
                     Icons.perm_identity_outlined,
@@ -71,7 +78,11 @@ class BuildDrawer extends StatelessWidget {
                 ),
                 BuildDrawerItem(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const MyBillsScreen(),));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MyBillsScreen(),
+                        ));
                   },
                   text: AppStrings.myBills,
                   icon: Icon(

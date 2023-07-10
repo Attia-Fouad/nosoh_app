@@ -148,5 +148,9 @@ abstract class AppStrings {
   static const q5 = 'هل تعلم أن هذا التطبيق لا يقدم أي توصيات استثمارية؟';
   static const doneMessage = 'أمورك في السليم';
   static const downloadMyBill = 'تحميل الفاتورة';
+  static const ahmed = 'احمد أحمدي احمد';
+  static const editProfileInfo = 'تعديل الملف الشخصي';
+  static const lorem1 =
+      'صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس هو ببساطة نص(Lorem Ipsum) عشرلوريم إيبسوم ) شكلي (بمعنى أن الغاية';
   static const con = '';
 }
