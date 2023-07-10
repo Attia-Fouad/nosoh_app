@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:nosoh_app/View/base_layout/controller/app_cubit/app_cubit.dart';
 
 import '../../../core/app_strings.dart';
 import '../../../core/assets_data.dart';
@@ -146,7 +147,9 @@ class BuildDrawer extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                logoutButton(onTap: () {}),
+                logoutButton(onTap: () {
+                  AppCubit.get(context).scaffoldKey.currentState?.closeDrawer();
+                }),
               ],
             ),
           ),

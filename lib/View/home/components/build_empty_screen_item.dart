@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nosoh_app/controller/app_cubit/app_cubit.dart';
+import 'package:nosoh_app/View/base_layout/controller/app_cubit/app_cubit.dart';
 
 import '../../../core/app_strings.dart';
 import '../../../core/assets_data.dart';

@@ -4,13 +4,13 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:nosoh_app/View/home/components/build_help_bottom_sheet.dart';
 import 'package:nosoh_app/View/notifications/notifications_screen.dart';
-import 'package:nosoh_app/controller/app_cubit/app_cubit.dart';
-import 'package:nosoh_app/controller/app_cubit/app_state.dart';
 import 'package:nosoh_app/core/colors.dart';
 
 import '../../core/styles.dart';
 import '../add_recommendation/add_recommendation_screen.dart';
 import 'components/build_drawer.dart';
+import 'controller/app_cubit/app_cubit.dart';
+import 'controller/app_cubit/app_state.dart';
 
 class BaseLayoutScreen extends StatefulWidget {
   const BaseLayoutScreen({super.key});
