@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nosoh_app/View/base_layout/base_layout_screen.dart';
 import 'package:nosoh_app/core/assets_data.dart';
 import 'package:nosoh_app/core/colors.dart';
 import 'package:nosoh_app/shared_components.dart';
@@ -8,6 +7,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 
 import '../../core/app_strings.dart';
 import '../../core/styles.dart';
+import '../login/captcha_screen.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({super.key, required this.phoneNumber});
@@ -156,12 +156,11 @@ class _OTPScreenState extends State<OTPScreen> {
                 color: completeOTP ? myColor : myColor.withOpacity(0.5),
                 onPressed: () {
                   if (completeOTP) {
-                    Navigator.pushAndRemoveUntil(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const BaseLayoutScreen(),
-                        ),
-                        (route) => false);
+                          builder: (context) => const CaptchaScreen(),
+                        ));
                   }
                 }),
           ],

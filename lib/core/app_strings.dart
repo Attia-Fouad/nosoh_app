@@ -158,5 +158,7 @@ abstract class AppStrings {
   static const educationLevel = 'المستوى التعليمي';
   static const bio = 'اكتب نبذة مختصرة عنك';
   static const save = 'حفظ';
+  static const captchaText =
+      'عزيزي المستخدم، لحمايتك نرجو منك الاجابة على هذه المسألة الحسابية';
   static const con = '';
 }

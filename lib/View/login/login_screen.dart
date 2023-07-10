@@ -122,7 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           enabledBorder: fill
                               ? OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(29.0),
+                                  borderRadius: BorderRadius.circular(8.0),
                                   borderSide: BorderSide(
                                     width: 1,
                                     color: formFieldTextCorrectColor,

@@ -26,8 +26,11 @@ class AssetsData {
   static const moneyIcon = 'assets/icons/moneyIcon.svg';
   static const warningIcon = 'assets/icons/warningIcon.svg';
   static const editProfileIcon = 'assets/icons/editProfileIcon.svg';
+  static const faceIcon = 'assets/icons/faceIcon.svg';
+  static const translateIcon = 'assets/icons/translateIcon.svg';
 
   static const doneAnimation = 'assets/animations/doneAnimation.json';
+  static const captchaAnimation = 'assets/animations/captchaAnimation.json';
   static const onBoardingAnimation1 =
       'assets/animations/onBoardingAnimation1.json';
   static const onBoardingAnimation2 =
