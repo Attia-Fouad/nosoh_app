@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:nosoh_app/View/profile/edit_profile_screen.dart';
 
 import '../../../core/app_strings.dart';
 import '../../../core/colors.dart';
@@ -42,7 +43,13 @@ class BuildProfileInformationItem extends StatelessWidget {
               decoration: BoxDecoration(
                   color: myColor, borderRadius: BorderRadius.circular(8)),
               child: MaterialButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const EditProfileScreen(),
+                      ));
+                },
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,

@@ -152,5 +152,11 @@ abstract class AppStrings {
   static const editProfileInfo = 'تعديل الملف الشخصي';
   static const lorem1 =
       'صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس هو ببساطة نص(Lorem Ipsum) عشرلوريم إيبسوم ) شكلي (بمعنى أن الغاية';
+  static const userName = 'اسم المستخدم';
+  static const fullName = 'الاسم بالكامل';
+  static const email = 'البريد الإلكتروني';
+  static const educationLevel = 'المستوى التعليمي';
+  static const bio = 'اكتب نبذة مختصرة عنك';
+  static const save = 'حفظ';
   static const con = '';
 }
