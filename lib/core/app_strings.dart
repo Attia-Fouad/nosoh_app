@@ -160,5 +160,7 @@ abstract class AppStrings {
   static const save = 'حفظ';
   static const captchaText =
       'عزيزي المستخدم، لحمايتك نرجو منك الاجابة على هذه المسألة الحسابية';
+  static const fingerPrint = 'عدادات البصمة';
+  static const changeLAnguage = 'تغيير اللغة';
   static const con = '';
 }
